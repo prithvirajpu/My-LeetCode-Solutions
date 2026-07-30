@@ -9,10 +9,10 @@ class Solution:
         # for i,j in new.items():
         #     if j ==1:
         #         return i
-        new=[]
+        new=set()
         for i in nums:
             if i in new:
                 new.remove(i)
             else:
-                new.append(i)
-        return new[0]
+                new.add(i)
+        return new.pop()
